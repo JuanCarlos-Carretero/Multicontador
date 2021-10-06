@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/ContadorTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@id/ContadorA"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/BotonResetAll"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/ContadorA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@id/ContadorB"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/BotonA"
+        app:layout_constraintTop_toBottomOf="@id/BotonResetAll" />
+    <TextView
+        android:id="@+id/ContadorB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@id/ContadorC"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/BotonB"
+        app:layout_constraintTop_toBottomOf="@id/ContadorA" />
+    <TextView
+        android:id="@+id/ContadorC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@id/ContadorD"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/BotonC"
+        app:layout_constraintTop_toBottomOf="@id/ContadorB" />
+    <TextView
+        android:id="@+id/ContadorD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/BotonD"
+        app:layout_constraintTop_toBottomOf="@id/ContadorC" />
+
+    <Button
+        android:id="@+id/BotonResetAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="RESET ALL"
+        app:layout_constraintBottom_toTopOf="@id/BotonResetA"
+        app:layout_constraintLeft_toRightOf="@id/ContadorTotal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BotonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="+1"
+        app:layout_constraintBottom_toTopOf="@id/BotonB"
+        app:layout_constraintLeft_toRightOf="@id/ContadorA"
+        app:layout_constraintRight_toLeftOf="@id/BotonResetA"
+        app:layout_constraintTop_toBottomOf="@id/BotonResetAll" />
+
+    <Button
+        android:id="@+id/BotonB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="+1"
+        app:layout_constraintBottom_toTopOf="@id/BotonC"
+        app:layout_constraintLeft_toRightOf="@id/ContadorB"
+        app:layout_constraintRight_toLeftOf="@id/BotonResetB"
+        app:layout_constraintTop_toBottomOf="@id/BotonA" />
+
+    <Button
+        android:id="@+id/BotonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="+1"
+        app:iconTint="@android:color/holo_green_dark"
+        app:layout_constraintBottom_toTopOf="@id/BotonD"
+        app:layout_constraintLeft_toRightOf="@id/ContadorC"
+        app:layout_constraintRight_toLeftOf="@id/BotonResetC"
+        app:layout_constraintTop_toBottomOf="@id/BotonB" />
+
+    <Button
+        android:id="@+id/BotonD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="+1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ContadorD"
+        app:layout_constraintRight_toLeftOf="@id/BotonResetD"
+        app:layout_constraintTop_toBottomOf="@id/BotonC" />
+
+    <Button
+        android:id="@+id/BotonResetA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Reset"
+        app:layout_constraintBottom_toTopOf="@id/BotonResetB"
+        app:layout_constraintLeft_toRightOf="@id/BotonA"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BotonResetAll" />
+
+    <Button
+        android:id="@+id/BotonResetB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Reset"
+        app:layout_constraintBottom_toTopOf="@id/BotonResetC"
+        app:layout_constraintLeft_toRightOf="@id/BotonC"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BotonResetA" />
+
+    <Button
+        android:id="@+id/BotonResetC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Reset"
+        app:layout_constraintBottom_toTopOf="@id/BotonResetD"
+        app:layout_constraintLeft_toRightOf="@id/BotonC"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BotonResetB" />
+
+    <Button
+        android:id="@+id/BotonResetD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/BotonD"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BotonResetC" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
